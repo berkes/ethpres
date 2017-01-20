@@ -10,6 +10,8 @@ Decentraal.
 don't beleive the hype.
 Je hebt geen blockchain nodig. Nee, ook dan niet.
 flow-chart-do-you-need-ablockchain.jpg
+Serieuzer:
+https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1#.suev52ycl
 
 OP_RETURN
 Hacks to add information to the Blockhain:
