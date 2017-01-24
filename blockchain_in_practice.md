@@ -77,9 +77,9 @@ lang: nl
 
 * Storting bij onafhankelijke derde.
 
-* Ann registreert op site van Bob en stort in fonds.
+* Alice registreert op site van Bob en stort in fonds.
 * Bob ziet storting maar kan geld niet spenderen.
-* Spam-preventie: Ann kan betrouwbaarheid kopen.
+* Spam-preventie: Alice kan betrouwbaarheid kopen.
 * Terugstortgarantie: Na N dagen wordt teruggestort tenzij beide
     partijen verlengen.
 
@@ -90,17 +90,17 @@ lang: nl
 
 ## Multisig: Escrow service, mediation
 
-* Ann, Bob en Mediator maken 2 van 3 multisig
-* Als Ann en Bob tekenen, voldoet betaling
-* Als Ann en Mediator tekenen, voldoet betaling
+* Alice, Bob en Mediator maken 2 van 3 multisig
+* Als Alice en Bob tekenen, voldoet betaling
+* Als Alice en Mediator tekenen, voldoet betaling
 * Als Bob en Mediator tekenen, voldoet betaling
 
 ## Multisig: Extra beveiliging, Extra redundantie
 
-* Ann maakt 2 van 3 multisig. Bewaart 3 keys op verschillende plekken.
-* Wanneer Ann wil spenderen, moet zij met 2 keys ondertekenen.
+* Alice maakt 2 van 3 multisig. Bewaart 3 keys op verschillende plekken.
+* Wanneer Alice wil spenderen, moet zij met 2 keys ondertekenen.
 * Dief moet 2 plekken inbreken.
-* Ann kan één key verliezen.
+* Alice kan één key verliezen.
 
 ## Multisig: Meerderheidsstem.
 
@@ -110,9 +110,9 @@ lang: nl
 ## De "pot" (assurance contract)
 
 * Iedereen kan storten tot het eindbedrag is bereikt.
-* Ann en Bob storten op fonds voor Carol.
+* Alice en Bob storten op fonds voor Carol.
 * Bij bereiken eindbedrag voor datum D wordt uitgekeerd aan Carol.
-* Bij niet bereiken totaalbedrag kunnen Ann en Bob terughalen.
+* Bij niet bereiken totaalbedrag kunnen Alice en Bob terughalen.
 
 # OP_RETURN
 
