@@ -1,9 +1,9 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: TODO
-subtitle: TODO
-abstract: TODO
+title: Blockchain
+subtitle: "Eigendom vastleggen in het Bitcoin netwerk"
+abstract: "Aan de hand van enkele voorbeelden bespreken we hoe eigendom in het Bitcoin netwerk vastgelegd kunnen worden. Van het eigendomsbewijs van een huis, via concertkaartjes, tot een datering van auteursrecht: Bitcoin biedt zoveel meer dan enkel geldstromen beheren."
 keywords:
   - Blockchain
   - Bitcoin
@@ -14,15 +14,41 @@ keywords:
 lang: nl
 ---
 
+## Over Bèr Kessels
+
+* Bèr Kessels
+* @berkes, github.com/berkes
+* Senior Developer at Wiebetaaltwat
+
+## Over de presentatie
+
+* Staat op [berk.es/blockcainpres](http://berk.es/blockchainpres)
+* Github: [github.com/berkes/blockcainpres](http://github.com/berkes/blockcainpres)
+
+## Over mij en Blockchain
+
+* April 2011 begonnen met Bitcoin
+* Werkt voor Fintech startup Searcle: aan Wiebetaaltwat
+* Momenteel betaalfunctie aan het inbouwen in Wiebetaaltwat
+* iDeal is niet ideaal. C2C is duur, complex en traag
+* Onderzoek naar smart contracts
+
+## Wiebetaaltwat
+
+* IOUs: huislijsten
+* 1 miljoen gebruikers
+* €20 miljoen aan "uitgaven" per maand
+* €2.6 miljoen aan onderlinge verrekeningen per maand
+* Kan dat met blockchain? Ja: ethereum. Makkelijk: nee. verdienmodel: nope
+
 ## Inhoud
 
-* Bitcoin en Blockchain +00:05 @00:00
-* Smart Contracts +00:05 @00:05
-* OP_RETURN +00:15 @00:10
-* Ethereum +00:05 @00:25
-* Colored Coins +00:10 @00:30
-* Vragen +00:05 @00:40
-* Bitcoin en Blockchain +00:05 @00:00
+* Bitcoin en Blockchain
+* Smart Contracts
+* OP_RETURN
+* Ethereum
+* Colored Coins
+* Vragen
 
 ## Vraag:
 
@@ -45,7 +71,7 @@ lang: nl
 
 > Maar je wilt hem wel gebruiken, waarschijnlijk.
 
-# Smart Contracts +00:05 @00:05
+# Smart Contracts
 
 ## Storting
 
@@ -88,7 +114,7 @@ lang: nl
 * Bij bereiken eindbedrag voor datum D wordt uitgekeerd aan Carol.
 * Bij niet bereiken totaalbedrag kunnen Ann en Bob terughalen.
 
-# OP_RETURN +00:15 @00:10
+# OP_RETURN
 
 ## OP_RETURN Geschiedenis
 
@@ -110,7 +136,7 @@ lang: nl
 * Daarmee verwijzingen *naar*, of representaties *van* data opnemen.
 * Evenveel "standaarden" als diensten en projecten: niets is vastgelegd
 
-# Ethereum +00:05 @00:25
+# Ethereum
 
 ## Wat is EThereum (ETH/ETC)
 * Bitcoin-achtige Software: Distributed VM.
@@ -135,7 +161,7 @@ lang: nl
 * Bewijs zijn verschillende hacks en aanvallen.
 * Diverse hardforks nodig geweest.
 
-# Colored Coins +00:10 @00:30
+# Colored Coins
 
 ## Wat is Colored Coin
 
@@ -149,7 +175,9 @@ lang: nl
 * Concertkaarten-verkoop en -handel.
 * Aandelenhandel.
 * Beloftes (futures).
-* In-game assets (wapens, upgrades, codes)
+* In-game assets. (wapens, upgrades, codes)
+* Mp3, Films, eBooks. (proof of ownership)
+* Verkiezingen. (stemmen uitdelen; stemmen doorgeven, stemmen)
 
 ## Nadelen
 
@@ -161,16 +189,16 @@ lang: nl
 
 * Coinprism: Pils, de nieuwe munteenheid.
 
-<div class="notes">
+# Vragen
 
-- Open coinprism in Firefox.
-- Browse to Pils. https://cpr.sm/Y8i8_bhPq6
-- 
+## Presentatie
 
-</div>
+* [berk.es/blockcainpres](http://berk.es/blockchainpres)
 
-# Vragen +00:05 @00:40
+# URLs And References
 
-# URLS: (TODO move to notes)
-https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1#.suev52ycl
+* Do you need a blockchain?: https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1#.suev52ycl
+* Coinprism Pils: https://www.coinprism.info/asset/ATnv4wZ39szaAQGTB1Z9RgsAfkDbPnLvXo
+* Coinprism Beer: https://www.coinprism.info/asset/AMWgTxUcpswSRAcpsB1Szk9o1pHvtXNDX6
+* Strange transactions: OP_RETURN: https://blockchain.info/strange-transactions
 
