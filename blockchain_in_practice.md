@@ -63,6 +63,10 @@ lang: nl
 > *eingendomsbewijzen* vastgelegd zijn. En *éénmalig overdracht*
 > gerandadeerd kan worden.
 
+## Ledgers
+
+![ledger](ledgers.jpg)
+
 ## do_you_need_a_blockchain.png
 
 ![No](do_you_need_a_blockchain.png)
