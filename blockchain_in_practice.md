@@ -71,6 +71,35 @@ lang: nl
 
 > Maar je wilt hem wel gebruiken, waarschijnlijk.
 
+## Festival: walled garden
+
+![muntjes](muntjes.jpg)
+
+## Festival: walled garden
+
+![bandje](bandje.png)
+
+## Festival: walled garden
+
+* Centrale autoriteit
+* Eenmalig
+* Eenvoudig te beveiligen
+
+## do_you_need_a_blockchain.png
+
+![No](do_you_need_a_blockchain.png)
+
+## Festival: breder
+
+* Vierdaagsefeesten
+* Muntjes onderling te verhandelen (Eenmalige uitgave gegarandeerd)
+* Kleine handelaren (Iedereen kan ontvangen)
+* Onafhankelijk, Decentraal
+
+## do_you_need_a_blockchain.png
+
+![Yes](do_you_need_a_blockchain.png)
+
 # Smart Contracts
 
 ## Storting
