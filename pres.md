@@ -64,11 +64,11 @@ contract status.
 
 ## Gedistribueerd?
 
-* Peers verbondne in een netwerk.
+* Peers verbonden in een netwerk
 * Peers kunnen wegvallen
 * Peers kunnen zich kwaadaardig gedragen:
-** Blockchain moet dan nog altijd functioneren (Byzantine fault
-tolerance)
+     + Blockchain moet dan nog altijd functioneren
+     (Byzantine fault tolerance)
 
 ## Waarom Gedistribueerd?
 
@@ -78,37 +78,34 @@ tolerance)
 
 ## Onveranderlijk? (Immutable)
 
-* Data kan niet aangepast worden nadat het in het grootboek is
-    weggeschreven.
-* Data is controleerbaar.
-* Er is concensus nodig om het grootboek bij te werken.
+* Data kan niet aangepast worden nadat het in het grootboek is weggeschreven
+* Data is controleerbaar
+* Er is concensus nodig om het grootboek bij te werken
 
 ## Wat is concensus?
 
-* "Iedereen" komt overeen wat de huidige status is.
-** Bijvoorbeeld: wat zijn de saldi van iedereens rekeningen.
+* "Iedereen" komt overeen wat de huidige status is
+    + Bijvoorbeeld: wat zijn de saldi van iedereens rekeningen
 
 ## Hoe komen we tot concensus?
 
 * Consensus algoritmes
-** Proof of work, Proof of stake.
+    + Proof of work, Proof of stake
 
 ## Wat is Ethereum
 
-* Ethereum is een decentraal platform ontworpen om smart contracts op te
-    draaien
-** geen single point of control/failure
-** censorship resistant
+* Ethereum is een decentraal platform ontworpen om smart contracts op te draaien
+    + geen single point of control/failure
+    + censorship resistant
 * Gedistribueerde state machine
-** (block met) transactions == state transition function
-** Of gewoon een decentrale computer
+    + (block met) transactions == state transition function
+    + Of gewoon een decentrale computer
 
 ## Wat is een Smart Contract?
 
 * **geen** contract in de zin van een papier met kleine
-    lettertjes juridische taal en handtekeningen.
-* Een "class" met functies die code uitvoert.
-
+    lettertjes juridische taal en handtekeningen
+* Een "class" met functies die code uitvoert
 
 # Hello World
 
@@ -143,23 +140,24 @@ contract HelloMyNameIs {
 ## Remix IDE
 
 ### Steps:
+
 * http://remix.ethereum.org (NOTE: HTTP, not HTTPS)
-* Verbind met private net.
-* Plak of schrijf het contract.
+* Verbind met private net
+* Plak of schrijf het contract
 * Compile, Create
-* Interact.
+* Interact
 
 ## Verbind met private net
 
 ![Remix settings](remix_settings.png)
 
-* Use url from slack.
-* Kies een van de accounts met 20.00 ETH in de dropdown.
+* Use url from slack
+* Kies een van de accounts met 20.00 ETH in de dropdown
 
 ## Plak of schrijf het contract
 
 * [http://bit.ly/2BiXfAm](http://bit.ly/2BiXfAm)
-* Repareer errors.
+* Repareer errors
 * Klaar?
 
 ## Compile en deploy
@@ -167,31 +165,32 @@ contract HelloMyNameIs {
 ### Publiceer op de ethereum blockchain.
 
 * Kies "Create"
-* Krijg een account: adres.
+* Krijg een account: adres
 * Fouten?
 
 ## Interact
 
 ### Gebruik het contract
+
 * Alle functies hebben een invoer: knop of knop+textfield
-* schrijf `"World"` naast `setName`. Let op de `"`.
-* Gebruik nu `getName` om de naam uit te lezen.
-* Speel wat rond.
-* Post je contract-adres op slack.
+* schrijf `"World"` naast `setName`. Let op de `"`
+* Gebruik nu `getName` om de naam uit te lezen
+* Speel wat rond
+* Post je contract-adres op slack
 
 ## Interact met ander contract
 
 * Laad het contract van één van je collega's in, of gebruik
   `0x0f34b963a09031434b447355218cd8a1b999663f`
-* gebruik hiervoor `At Address` formulier.
-* Probeer `setName`, merk de foutmelding op.
+* gebruik hiervoor `At Address` formulier
+* Probeer `setName`, merk de foutmelding op
 
 # What we just did
 
-## Compile en deploy.
+## Compile en deploy
 
-* Met de "Web3.js" API compileren en deployen.
-* Dit wordt een "account": een entiteit met een wallet, op een adres.
+* Met de "Web3.js" API compileren en deployen
+* Dit wordt een "account": een entiteit met een wallet, op een adres
 
 ## Interactie via formulieren
 
@@ -215,30 +214,28 @@ contract HelloMyNameIs {
 
 ## Gas, Ethers, Gwei
 
-* Ether is betaalmiddel.
-* Uitgedrukt in "wei", kleinst deelbare eenheid.
+* Ether is betaalmiddel
+* Uitgedrukt in "wei", kleinst deelbare eenheid
 * 1e18 wei = 1 ether
-* gas is dynamisch, 1 gas kost X wei.
+* gas is dynamisch, 1 gas kost X wei
   [https://ethgasstation.info/](https://ethgasstation.info/)
-
 
 ## Operaties kosten Gas
 
-* Iedere operatie kost gas.
-* Sommige operaties zijn duur, andere goedkoop.
-* Wanneer er te weinig gas is, wordt een OutOfGas exceptie geraised.
+* Iedere operatie kost gas
+* Sommige operaties zijn duur, andere goedkoop
+* Wanneer er te weinig gas is, wordt een OutOfGas exceptie geraised
 
 ## Waarom Gas?
 
-* Gebruiker/aanvaller betaalt.
+* Gebruiker/aanvaller betaalt
 * Endless loops niet mogelijk (Halting problem)
-* Miners ontvangen gas voor het draaien van de code.
+* Miners ontvangen gas voor het draaien van de code
 
 ## Solidity
 
-* Defacto standaardtaal voor het schrijven van Ethereum smart contracts.
-* Alternatieven: Serpent (Python), LLL (Lisp), Viper (Python), Bamboo
-    (OCaml)
+* Defacto standaardtaal voor het schrijven van Ethereum smart contracts
+* Alternatieven: Serpent (Python), LLL (Lisp), Viper (Python), Bamboo (OCaml)
 
 # Broodfonds.sol
 
@@ -246,16 +243,16 @@ contract HelloMyNameIs {
 
 ### In een notendop:
 
-* uitkering voor ondernemers bij ziekte, betaald door mede-ondernemers.
-* basisidee: klein, hecht netwerk.
+* uitkering voor ondernemers bij ziekte, betaald door mede-ondernemers
+* basisidee: klein, hecht netwerk
 
 ## Broodfonds voorwaarden
 
 * Given you have deposited this month
 * And you have called in sick at least 2629800 seconds ago (one month)
-* And at least half of the participants have acknowledged your sick call.
+* And at least half of the participants have acknowledged your sick call
 * Then you may withdraw at most 22 * your deposit each month until you
-    call in better.
+    call in better
 
 ## pragma, contract, init
 
@@ -313,10 +310,11 @@ function withdraw(uint amount) ifWithdrawalCorrect ifParticipant public {
 ~~~
 
 ## Re-entry explained
+
 1. Contract Mallory calls `withdraw()`
 2. Contract BroodFonds runs up to `msg.sender.transfer()`
-3. Contract `transfer` operation hands back to Mallory.
-4. Mallory calls back in, and can withdraw again.
+3. Contract `transfer` operation hands back to Mallory
+4. Mallory calls back in, and can withdraw again
 
 # Tijd? Vragen?
 
@@ -328,6 +326,3 @@ function withdraw(uint amount) ifWithdrawalCorrect ifParticipant public {
 
 * Solidity documentation: https://solidity.readthedocs.io/en/develop/
 * Do you need a blockchain?: https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1#.suev52ycl
-* Clone your own token: https://github.com/Giveth/minime
-
-
