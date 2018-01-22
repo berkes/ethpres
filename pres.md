@@ -256,15 +256,28 @@ contract HelloMyNameIs {
 
 ## pragma, contract, init
 
+
 ~~~javascript
 pragma solidity ^0.4.0;
 
 contract BroodFonds {
+  address public chairperson;
+
   function BroodFonds() public {
     chairperson = msg.sender;
   }
 }
 ~~~
+
+## Chairman: storage, scoping, types
+
+* State variables zijn `storage`. Storage is duur.
+* Method arguments zijn `memory` by default. Memory wordt weggegooid na
+    het draaien, maar is goedkoper.
+* Scope `public` geeft een getter.
+* Scope `private` maakt niet dat externen de waarde niet kunnen zien!
+* Type `address` is een intern type. Verwijst naar een account.
+* `msg` is een interne variabele, bevaat informatie over de aanroeper.
 
 ## require, modifier
 
@@ -275,6 +288,18 @@ modifier ifParticipant() {
 }
 
 function callInSick() ifParticipant public {
+  participants[msg.sender].calledInSick = block.timestamp;
+}
+~~~
+
+## Wat gebeurt hier wanneer een niet-deelnemer ziek meldt?
+
+## modifiers beschermen een functie met condities.
+
+### Doet hetzelfde:
+~~~javascript
+function callInSick() ifParticipant public {
+  require(participants[msg.sender].exists);
   participants[msg.sender].calledInSick = block.timestamp;
 }
 ~~~
@@ -290,6 +315,12 @@ function callInSick() ifParticipant public {
 }
 ~~~
 
+## Event-listeners.
+
+* SAAS diensten die mailen, push-notificaties sturen etc.
+* Eigen contracten laten triggeren.
+* Eigen code laten triggeren.
+
 ## selfdestruct
 
 ~~~javascript
@@ -297,6 +328,17 @@ function kill() public onlyowner {
   selfdestruct(owner);
 }
 ~~~
+
+## Kill-switch
+
+* Bouw altijd meerdere lagen beveiliging in.
+* De laatste laag is een kill-switch, waarbij een persoon alle fondsen
+    krijgt.
+* Verbeteringen: meerdere lagen, één waarbij alle deelnemers naar rato
+    krijgen.
+* Verbetering: stuur niet naar de chairperson, maar naar een ander
+    contract wat het geld bijv. x maanden vasthoud, of verdeelt over
+    deelnemers.
 
 ## Re-entry bug
 
