@@ -107,6 +107,19 @@ contract status.
     lettertjes juridische taal en handtekeningen
 * Een "class" met functies die code uitvoert
 
+## Web 3.0 / dApps
+
+* **Geen centraal controlerende instantie**. Je appartement verhuren is tussen
+    jou en de huurder. AirBnB of andere "Siren Servers" hebben daarin
+    geen plek.
+* **Data eigendom**. Je blijft eigenaar van jou data. Jij kunt deze
+    verkopen. Of niet.
+* **Minder heftige hacks**. Decentraal betekent dat een hacker het hele
+    netwerk moet overnemen om toegang te krijgen, ipv een centrale server.
+* **Permissionless**. Of je nu een onderdrukte minderheid, of gezochte
+    terrorist bent, niemand kan je toegang onthouden tot diensten.
+* https://medium.com/@matteozago/why-the-web-3-0-matters-and-you-should-know-about-it-a5851d63c949
+
 # Hello World
 
 ## Code
