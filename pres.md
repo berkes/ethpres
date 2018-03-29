@@ -25,6 +25,11 @@ lang: nl
 * Staat op: [github.com/berkes/ethpres](http://github.com/berkes/ethpres)
 * URL komt aan het einde nog eens voorbij.
 
+## Notes en prikbord
+
+http://piratepad.net/ZDhQsgpF4k
+![QR of URL](piratepad_url.png)
+
 ## Over mij en Blockchain
 
 * April 2011 begonnen met Bitcoin
