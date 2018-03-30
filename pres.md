@@ -169,8 +169,10 @@ contract HelloMyNameIs {
 
 ![Remix settings](remix_settings.png)
 
-* Use url from slack
-* Kies een van de accounts met 20.00 ETH in de dropdown
+* Gebruik de URL uit de piratepad.
+* Kies een van de accounts met 100.00 ETH in de dropdown
+* evt zet je even in de piratepad je naam en het account dat jij
+    gebruikt.
 
 ## Plak of schrijf het contract
 
@@ -194,12 +196,11 @@ contract HelloMyNameIs {
 * schrijf `"World"` naast `setName`. Let op de `"`
 * Gebruik nu `getName` om de naam uit te lezen
 * Speel wat rond
-* Post je contract-adres op slack
+* Post je contract-adres op de piratepad
 
 ## Interact met ander contract
 
-* Laad het contract van één van je collega's in, of gebruik
-  `0x0f34b963a09031434b447355218cd8a1b999663f`
+* Laad het contract van één van je collega's in
 * gebruik hiervoor `At Address` formulier
 * Probeer `setName`, merk de foutmelding op
 
@@ -218,11 +219,11 @@ contract HelloMyNameIs {
 
 ## Clients
 
-* geth, web3 in een REPL
-* mist wallet
-* remix IDE
-* JS op jou site
-* andere wallets?
+* **CLI:** geth, web3/node.js, solc
+* **Officiëel:** mist wallet
+* **Web:** remix IDE
+* **dApp:** JS op jou site
+* En vele andere wallets
 
 ## Gas
 
@@ -295,7 +296,7 @@ contract BroodFonds {
 * Scope `public` geeft een getter.
 * Scope `private` maakt niet dat externen de waarde niet kunnen zien!
 * Type `address` is een intern type. Verwijst naar een account.
-* `msg` is een interne variabele, bevaat informatie over de aanroeper.
+* `msg` is een interne variabele, bevat informatie over de aanroeper.
 
 ## require, modifier
 
