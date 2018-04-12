@@ -185,7 +185,7 @@ contract HelloMyNameIs {
 ### Publiceer op de ethereum blockchain.
 
 * Kies "Create"
-* Krijg een account: adres
+* Gelukt? Je contract heeft nu een nieuw adres gekregen!
 * Fouten?
 
 ## Interact
@@ -196,7 +196,7 @@ contract HelloMyNameIs {
 * schrijf `"World"` naast `setName`. Let op de `"`
 * Gebruik nu `getName` om de naam uit te lezen
 * Speel wat rond
-* Post je contract-adres op de piratepad
+* Post je **contract**-adres op de piratepad
 
 ## Interact met ander contract
 
@@ -210,6 +210,8 @@ contract HelloMyNameIs {
 
 * Met de "Web3.js" API compileren en deployen
 * Dit wordt een "account": een entiteit met een wallet, op een adres
+* Twee soorten accounts: contracts (zonder private key) en users (met
+    private key)
 
 ## Interactie via formulieren
 
