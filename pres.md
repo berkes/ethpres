@@ -218,6 +218,7 @@ contract HelloMyNameIs {
 * Contract heeft een ABI, Application Binary Interface
 * Bescrhijft de interface van een contract
 * Een client kan dan functies aanroepen op het contract
+* Iedere interactie met state-change is een *transactie*.
 
 ## Clients
 
@@ -227,11 +228,23 @@ contract HelloMyNameIs {
 * **dApp:** JS op jou site
 * En vele andere wallets
 
+## Transacties
+
+Transactie bestaat uit:
+* nonce
+* gasPrice
+* gasLimit
+* to
+* value
+* v,r,s - signature
+* init(`EVM-code`) (optioneel)
+
 ## Gas
 
 * Draaien van code kost wat:
 ![details](details.png)
 * Note `gas`
+* Alle `OPCODES` hebben vooraf bepaalde gas-cost
 
 ## Gas, Ethers, Gwei
 
