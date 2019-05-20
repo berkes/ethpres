@@ -1,9 +1,9 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: Write Smart Contracts on Blockchains
+title: dApp en Blochain Development
 subtitle: "Een workshop waarin we de wereld van Smart Contracts op de Ethereum blockchain induiken."
-abstract: "In deze twee uur durende workshop bouwen ons eigen munteenheid en schrijven we contracten waarmee we die munten kunnen gebruiken om code op de blockchain te draaien. We leren hoe het Ethereum netwerk in elkaar zit en hoe je op deze blockchain kunt programmeren."
+abstract: "In deze  workshop bouwen ons eigen crowdfundplatform voor Feesten en Partijen."
 keywords:
   - Blockchain
   - Ethereum
@@ -18,7 +18,7 @@ lang: nl
 * Bèr Kessels
 * @berkes, github.com/berkes
 * Ruby, Blockchain en Open Source developer
-* Iets met fintech.
+* Founder van PlaceBazaar
 
 ## Over de presentatie
 
@@ -33,99 +33,122 @@ http://piratepad.net/ZDhQsgpF4k
 ## Over mij en Blockchain
 
 * April 2011 begonnen met Bitcoin
-* In de beginfase van enkele startups rondom Ethereum.
+* In bouw aan een startup, placebazaar.org. Bouw dit op Ethereum
 
 ## Inhoud
 
-* Intro?
-* Hello World
-* What we just did
-* BroodFonds
+* Welk probleem lost Blockchain op?
+* Wat is een Smart Contract?
+* Wat is een dApp (Web 3.0)?
+* Wat is Ethereum?
 
-## Vraag:
+## Wat is Blockchain?
 
-* Wie heeft geen idee wat Blockchain, Bitcoin of Ethereum is?
-* Of wat een Smart Contract is?
+Een onveranderlijk, gedistribueerd grootboek
 
-# Intro
-## Blockchain
-
-> Consensus
-> Trustless
-> Distributed
->
-> Permissionless
-
-## Wat is een Blockchain?
-
-Een **onveranderlijke**, gedistribueerd grootboek
-
-An Immutable, Distributed Ledger
+*An Immutable, Distributed Ledger*
 
 ## Wat bedoelen we met een grootboek?
 
-Een "database" met daarin informatie als saldi, eigendomsbewijzen, smart
-contract status.
+Een database met daarin opeenvolgende transacties:
 
-## Gedistribueerd?
+Beginstand: Anne: 6, Bob 0, Carol 1
 
-* Peers verbonden in een netwerk
-* Peers kunnen wegvallen
-* Peers kunnen zich kwaadaardig gedragen:
-     + Blockchain moet dan nog altijd functioneren
-     (Byzantine fault tolerance)
+1. **Anne** geeft 5 aan **Bob**
+1. **Bob** geeft 2 aan **Carol**
+1. **Carol** geeft 1 aan **Anne**
 
-## Waarom Gedistribueerd?
+Eindstand: Anne 2, Bob 3, Carol 1
+
+## Gedistribueerd:
+
+### Doen!
+
+## Centraal, Decentraal, Gedistribueerd
+![Centraal vs Decentraal vs Gedistribueerd](centraal-decentraal-distribueerd.jpeg)
+
+## Wat zagen we?
+
+Gedistribueerd (cash) is:
+
+* Trustless (vertrouwenloos).
+* Permissionless (vergunningsvrij)
+* Uncensorable (oncensureerbaar)
+* Verifiable (controleerbaar)
+
+## Dat komt voort uit "Distributed"
 
 * Geen centraal "point of failure"
 * Kan wereldwijd opschalen
-* Trustless, Uncensorable, Permissionless
+* Heet ook wel "Peer to Peer, P2P"
+
+## Waarom werkt muntgeld?
+
+Ideeën?
+
+## En hoe moet dat digitaal?
+
+* Tot 2008 werd dit onmogelijk geacht
+* Altijd via centrale autoriteiten
+
+## Centraal:
+
+### DOEN
+
+## Een blockchain!
+
+Een onveranderlijk, gedistribueerd grootboek!
+
+## Digitaal Gedistribueerd:
+
+### DOEN
+
+* 5 Personen naar voren.
+* Krijgen een "digitale kasboek"
+* Anne betaalt 2 BTC aan Bob
+* Bob probeert aan Carol 3 BTC te betalen
+* Carol betaalt 0.5 BTC aan Bob
+
+## DOEN 2
+
+![Virtueel kasboek](virtual_ledger.png)
+
+## Hoe kan dit werken?
+
+Ideeën?
 
 ## Onveranderlijk? (Immutable)
 
 * Data kan niet aangepast worden nadat het in het grootboek is weggeschreven
 * Data is controleerbaar
-* Er is concensus nodig om het grootboek bij te werken
+* Er is consensus nodig om het grootboek bij te werken
 
-## Wat is concensus?
+## Wat is consensus?
 
 * "Iedereen" komt overeen wat de huidige status is
     + Bijvoorbeeld: wat zijn de saldi van iedereens rekeningen
 
-## Hoe komen we tot concensus?
+## Distributed
 
-* Consensus algoritmes
-    + Proof of work, Proof of stake
+* Complex
+* Maar zonder centrale partijen!
 
-## Wat is Ethereum
+# Ethereum
 
-* Ethereum is een decentraal platform ontworpen om smart contracts op te draaien
+* Ethereum is een decentraal platform ontworpen om software op te draaien
     + geen single point of control/failure
     + censorship resistant
 * Gedistribueerde state machine
     + (block met) transactions == state transition function
     + Of gewoon een decentrale computer
+* Software: Smart Contracts
 
-## Wat is een Smart Contract?
+# Wat is een Smart Contract?
 
 * **geen** contract in de zin van een papier met kleine
     lettertjes juridische taal en handtekeningen
+* Een stuk software
 * Een "class" met functies die code uitvoert
-
-## Web 3.0 / dApps
-
-* **Geen centraal controlerende instantie**. Je appartement verhuren is tussen
-    jou en de huurder. AirBnB of andere "Siren Servers" hebben daarin
-    geen plek.
-* **Data eigendom**. Je blijft eigenaar van jou data. Jij kunt deze
-    verkopen. Of niet.
-* **Minder heftige hacks**. Decentraal betekent dat een hacker het hele
-    netwerk moet overnemen om toegang te krijgen, ipv een centrale server.
-* **Permissionless**. Of je nu een onderdrukte minderheid, of gezochte
-    terrorist bent, niemand kan je toegang onthouden tot diensten.
-* https://medium.com/@matteozago/why-the-web-3-0-matters-and-you-should-know-about-it-a5851d63c949
-
-# Hello World
 
 ## Code
 ~~~javascript
@@ -139,85 +162,82 @@ contract HelloMyNameIs {
     issuer = msg.sender;
   }
 
-  modifier ifIssuer () {
-    require(issuer == msg.sender) ;
-    _;
-  }
-
   function getName() public constant returns(string) {
     return name;
   }
 
-  function setName(string newName) ifIssuer public returns(string) {
+  function setName(string newName) public returns(string) {
+    require(issuer == msg.sender) ;
     name = newName;
     return name;
   }
 }
 ~~~
 
-## Remix IDE
+# Wat is een dApp (Web 3.0)?
+
+* Een interface voor een of meerdere Smart Contracts.
+* Een applicatie die Smart Contracts gebruikt.
+
+## De voordelen?
+
+* **Geen centraal controlerende instantie**. Je appartement verhuren is tussen
+    jou en de huurder. AirBnB of andere "Siren Servers" hebben daarin
+    geen plek.
+* **Data eigendom**. Je blijft eigenaar van jou data. Jij kunt deze
+    verkopen. Of niet.
+* **Minder heftige hacks**. Decentraal betekent dat een hacker het hele
+    netwerk moet overnemen om toegang te krijgen, ipv een centrale server.
+* **Permissionless**. Of je nu een onderdrukte minderheid, of gezochte
+    terrorist bent, niemand kan je toegang onthouden tot diensten.
+
+## Smart Contract proberen
+
+* Ga naar [HelloMyNameIsOpen](https://rinkeby.etherscan.io/address/0xe002102bcdf8ea289f5e3cbed4ca1d6063b45fc5) (link op eterpad)
+* Onder "Read" bekijk de huidige naam.
+* Onder "Write" connect met metamask.
+* Verander de naam. Kies  "write". Bevestig in MetaMask.
+* Bekijk transactions. Bekijk de naam.
+
+## Zelf een Smart Contract releasen
+
+# Remix IDE
 
 ### Steps:
 
-* http://remix.ethereum.org (NOTE: HTTP, not HTTPS)
-* Verbind met private net
-* Plak of schrijf het contract
-* Compile, Create
-* Interact
+* https://remix.ethereum.org
+* Verbind met MetaMask.
+* knip/plak het contract "HelloMyNameIs" naar remix IDE: link in etherpad
+* Compile, Create.
+* Interact.
 
-## Verbind met private net
-
-![Remix settings](remix_settings.png)
-
-* Gebruik de URL uit de piratepad.
-* Kies een van de accounts met 100.00 ETH in de dropdown
-* evt zet je even in de piratepad je naam en het account dat jij
-    gebruikt.
-
-## Plak of schrijf het contract
-
-* [http://bit.ly/2BiXfAm](http://bit.ly/2BiXfAm)
-* Repareer errors
-* Klaar?
-
-## Compile en deploy
-
-### Publiceer op de ethereum blockchain.
-
-* Kies "Create"
-* Gelukt? Je contract heeft nu een nieuw adres gekregen!
-* Fouten?
-
-## Interact
-
-### Gebruik het contract
+### Gebruik het contract:
 
 * Alle functies hebben een invoer: knop of knop+textfield
-* schrijf `"World"` naast `setName`. Let op de `"`
+* schrijf bijvoorbeeld `"World"` naast `setName`. Let op de `"`
 * Gebruik nu `getName` om de naam uit te lezen
-* Speel wat rond
-* Post je **contract**-adres op de piratepad
+* Speel wat rond.
+* Post je **contract**-adres op de etherpad
 
 ## Interact met ander contract
 
-* Laad het contract van één van je collega's in
-* gebruik hiervoor `At Address` formulier
-* Probeer `setName`, merk de foutmelding op
+* Laad het contract van één van je collega's in.
+* gebruik hiervoor `At Address` formulier.
+* Probeer `setName`, merk de foutmelding op.
 
 # What we just did
 
 ## Compile en deploy
 
-* Met de "Web3.js" API compileren en deployen
-* Dit wordt een "account": een entiteit met een wallet, op een adres
+* Met de "Web3.js" API compileren en deployen.
+* Dit wordt een "account": een entiteit met een wallet, op een adres.
 * Twee soorten accounts: contracts (zonder private key) en users (met
     private key)
 
 ## Interactie via formulieren
 
-* Contract heeft een ABI, Application Binary Interface
-* Bescrhijft de interface van een contract
-* Een client kan dan functies aanroepen op het contract
+* Contract heeft een Interface (ABI).
+* Een client kan dan functies aanroepen op het contract.
 * Iedere interactie met state-change is een *transactie*.
 
 ## Clients
@@ -230,14 +250,10 @@ contract HelloMyNameIs {
 
 ## Transacties
 
-Transactie bestaat uit:
-* nonce
-* gasPrice
-* gasLimit
-* to
-* value
-* v,r,s - signature
-* init(`EVM-code`) (optioneel)
+* Transactie is een verandering, write, op blockchain uitvoeren.
+* Succesvol aanroepen van `setName` is een transactie.
+* Leesacties zijn `gratis` en instant.
+* Transacties duren even.
 
 ## Gas
 
@@ -252,7 +268,7 @@ Transactie bestaat uit:
 * Uitgedrukt in "wei", kleinst deelbare eenheid
 * 1e18 wei = 1 ether
 * gas is dynamisch, 1 gas kost X wei
-  [https://ethgasstation.info/](https://ethgasstation.info/)
+  [ethgasstation.info](https://ethgasstation.info/)
 
 ## Operaties kosten Gas
 
@@ -271,134 +287,15 @@ Transactie bestaat uit:
 * Defacto standaardtaal voor het schrijven van Ethereum smart contracts
 * Alternatieven: Serpent (Python), LLL (Lisp), Viper (Python), Bamboo (OCaml)
 
-# Broodfonds.sol
+# FundFissa
 
-## Broodfonds
+## Security
 
-### In een notendop:
-
-* uitkering voor ondernemers bij ziekte, betaald door mede-ondernemers
-* basisidee: klein, hecht netwerk
-
-## Broodfonds voorwaarden
-
-* Given you have deposited this month
-* And you have called in sick at least 2629800 seconds ago (one month)
-* And at least half of the participants have acknowledged your sick call
-* Then you may withdraw at most 22 * your deposit each month until you
-    call in better
-
-## pragma, contract, init
-
-
-~~~javascript
-pragma solidity ^0.4.0;
-
-contract BroodFonds {
-  address public chairperson;
-
-  function BroodFonds() public {
-    chairperson = msg.sender;
-  }
-}
-~~~
-
-## Chairman: storage, scoping, types
-
-* State variables zijn `storage`. Storage is duur.
-* Method arguments zijn `memory` by default. Memory wordt weggegooid na
-    het draaien, maar is goedkoper.
-* Scope `public` geeft een getter.
-* Scope `private` maakt niet dat externen de waarde niet kunnen zien!
-* Type `address` is een intern type. Verwijst naar een account.
-* `msg` is een interne variabele, bevat informatie over de aanroeper.
-
-## require, modifier
-
-~~~javascript
-modifier ifParticipant() {
-  require(participants[msg.sender].exists);
-  _;
-}
-
-function callInSick() ifParticipant public {
-  participants[msg.sender].calledInSick = block.timestamp;
-}
-~~~
-
-## Wat gebeurt hier wanneer een niet-deelnemer ziek meldt?
-
-## modifiers beschermen een functie met condities.
-
-### Doet hetzelfde:
-~~~javascript
-function callInSick() ifParticipant public {
-  require(participants[msg.sender].exists);
-  participants[msg.sender].calledInSick = block.timestamp;
-}
-~~~
-
-## Events
-
-~~~javascript
-event CalledInSick(address caller);
-
-function callInSick() ifParticipant public {
-  participants[msg.sender].calledInSick = block.timestamp;
-  CalledInSick(msg.sender);
-}
-~~~
-
-## Event-listeners.
-
-* SAAS diensten die mailen, push-notificaties sturen etc.
-* Eigen contracten laten triggeren.
-* Eigen code laten triggeren.
-
-## selfdestruct
-
-~~~javascript
-function kill() public onlyowner {
-  selfdestruct(owner);
-}
-~~~
-
-## Kill-switch
-
-* Bouw altijd meerdere lagen beveiliging in.
-* De laatste laag is een kill-switch, waarbij een persoon alle fondsen
-    krijgt.
-* Verbeteringen: meerdere lagen, één waarbij alle deelnemers naar rato
-    krijgen.
-* Verbetering: stuur niet naar de chairperson, maar naar een ander
-    contract wat het geld bijv. x maanden vasthoud, of verdeelt over
-    deelnemers.
-
-## Re-entry bug
-
-~~~javascript
-function withdraw(uint amount) ifWithdrawalCorrect ifParticipant public {
-  participant = participants[msg.sender];
-  require(participant.credit > amount);
-  msg.sender.transfer(amount);
-  participant.credit = participant.credit - amount;
-}
-~~~
-
-## Re-entry explained
-
-1. Contract Mallory calls `withdraw()`
-2. Contract BroodFonds runs up to `msg.sender.transfer()`
-3. Contract `transfer` operation hands back to Mallory
-4. Mallory calls back in, and can withdraw again
-
-# Tijd? Vragen?
+* It runs forever. Immutable.
+* Kill-switch
+* Logical errors
+* Programming errors
 
 ## Presentatie
 
 * [github.com/berkes/ethpres](github.com/berkes/ethpres)
-
-## URLs And References
-
-* Solidity documentation: https://solidity.readthedocs.io/en/develop/
-* Do you need a blockchain?: https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1#.suev52ycl
