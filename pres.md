@@ -27,8 +27,8 @@ lang: nl
 
 ## Notes en prikbord
 
-http://piratepad.net/ZDhQsgpF4k
-![QR of URL](piratepad_url.png)
+https://beta.etherpad.org/p/fundfissa
+(ook op Moodle)
 
 ## Over mij en Blockchain
 
@@ -62,12 +62,10 @@ Eindstand: Anne 2, Bob 3, Carol 1
 
 ## Gedistribueerd:
 
-### Doen!
-
 ## Centraal, Decentraal, Gedistribueerd
 ![Centraal vs Decentraal vs Gedistribueerd](centraal-decentraal-distribueerd.jpeg)
 
-## Wat zagen we?
+## Bijvoorbeeld contant geld:
 
 Gedistribueerd (cash) is:
 
@@ -93,29 +91,9 @@ Ideeën?
 
 ## Centraal:
 
-### DOEN
-
 ## Een blockchain!
 
 Een onveranderlijk, gedistribueerd grootboek!
-
-## Digitaal Gedistribueerd:
-
-### DOEN
-
-* 5 Personen naar voren.
-* Krijgen een "digitale kasboek"
-* Anne betaalt 2 BTC aan Bob
-* Bob probeert aan Carol 3 BTC te betalen
-* Carol betaalt 0.5 BTC aan Bob
-
-## DOEN 2
-
-![Virtueel kasboek](virtual_ledger.png)
-
-## Hoe kan dit werken?
-
-Ideeën?
 
 ## Onveranderlijk? (Immutable)
 
@@ -289,12 +267,46 @@ contract HelloMyNameIs {
 
 # FundFissa
 
+Smart Contract om crowdfunding voor een event te doen.
+
+Als voor aanvang van het event de funding voltooid is, krijgt:
+* de **organisator** alles uitbetaald,
+* de **deelnemers** een toegangsbewijs
+Als voor aanvang van het event de funding *niet* gehaald is:
+* krijgen alle deelnemers hun inleg terug.
+
+## Wat uitleg en details
+![tests](./tests.png)
+
+### Deploy
+
+* Zet 1 crowdfunding.
+* 1 contract == 1 crowdfunding. Simpel, maar duur en onhandig.
+
+### purchase
+
+* We houden een balansboek bij.
+* Validatie of crowdfunding not actief is
+* Gebruiker stuurt fondsen mee.
+* Validatie of meegestuurde fondsen precies 1 ticketprijs zijn.
+
+### withdraw
+
+* eerlijker
+* veiliger
+* defacto standaard
+
+### Events
+
+* Alles is asynchroon.
+* Events kunnen worden uitgestuurd.
+
 ## Security
 
 * It runs forever. Immutable.
-* Kill-switch
-* Logical errors
-* Programming errors
+* Kill-switch.
+* Logical errors.
+* Programming errors.
 
 ## Presentatie
 
