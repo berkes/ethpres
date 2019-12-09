@@ -28,7 +28,6 @@ lang: nl
 ## Notes en prikbord
 
 https://beta.etherpad.org/p/fundfissa
-(ook op Moodle)
 
 ## Over mij en Blockchain
 
@@ -38,27 +37,10 @@ https://beta.etherpad.org/p/fundfissa
 ## Inhoud
 
 * Welk probleem lost Blockchain op?
-* Wat is een Smart Contract?
 * Wat is een dApp (Web 3.0)?
 * Wat is Ethereum?
-
-## Wat is Blockchain?
-
-Een onveranderlijk, gedistribueerd grootboek
-
-*An Immutable, Distributed Ledger*
-
-## Wat bedoelen we met een grootboek?
-
-Een database met daarin opeenvolgende transacties:
-
-Beginstand: Anne: 6, Bob 0, Carol 1
-
-1. **Anne** geeft 5 aan **Bob**
-1. **Bob** geeft 2 aan **Carol**
-1. **Carol** geeft 1 aan **Anne**
-
-Eindstand: Anne 2, Bob 3, Carol 2
+* Smart Contract: simpele voorbeelden
+* Smart Contract: complexer voorbeeld
 
 ## Gedistribueerd:
 
