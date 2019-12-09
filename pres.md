@@ -1,7 +1,7 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: dApp en Blochain Development
+title: dApp en Blockchain Development
 subtitle: "Een workshop waarin we de wereld van Smart Contracts op de Ethereum blockchain induiken."
 abstract: "In deze  workshop bouwen ons eigen crowdfundplatform voor Feesten en Partijen."
 keywords:
