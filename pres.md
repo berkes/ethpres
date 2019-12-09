@@ -58,7 +58,7 @@ Beginstand: Anne: 6, Bob 0, Carol 1
 1. **Bob** geeft 2 aan **Carol**
 1. **Carol** geeft 1 aan **Anne**
 
-Eindstand: Anne 2, Bob 3, Carol 1
+Eindstand: Anne 2, Bob 3, Carol 2
 
 ## Gedistribueerd:
 
