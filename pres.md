@@ -22,7 +22,7 @@ lang: nl
 
 ## Over de presentatie
 
-* Staat op: [github.com/berkes/ethpres](http://github.com/berkes/ethpres)
+* Staat op: [git.webschuur.com/berkes/ethpres](https://git.webschuur.com/berkes/ethpres)
 * URL komt aan het einde nog eens voorbij.
 
 ## Notes en prikbord
@@ -151,6 +151,12 @@ contract HelloMyNameIs {
 * **Permissionless**. Of je nu een onderdrukte minderheid, of gezochte
     terrorist bent, niemand kan je toegang onthouden tot diensten.
 
+## Security
+
+* Het draait voor eeuwig: Kill-switch.
+* Logical errors: de letter van de wet.
+* Programming errors: de letter van de wet.
+
 ## Smart Contract proberen
 
 * Ga naar [HelloMyNameIsOpen](https://rinkeby.etherscan.io/address/0xe002102bcdf8ea289f5e3cbed4ca1d6063b45fc5) (link op eterpad)
@@ -278,18 +284,6 @@ Als voor aanvang van het event de funding *niet* gehaald is:
 * veiliger
 * defacto standaard
 
-### Events
-
-* Alles is asynchroon.
-* Events kunnen worden uitgestuurd.
-
-## Security
-
-* It runs forever. Immutable.
-* Kill-switch.
-* Logical errors.
-* Programming errors.
-
 ## Presentatie
 
-* [github.com/berkes/ethpres](github.com/berkes/ethpres)
+* [git.webschuur.com/berkes/ethpres](https://git.webschuur.com/berkes/ethpres)
