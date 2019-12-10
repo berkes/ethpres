@@ -1,23 +1,19 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.11;
 
 contract HelloMyNameIs {
   string name;
   address issuer;
 
-  function HelloMyNameIs() public {
+  constructor() public {
     issuer = msg.sender;
   }
 
-  modifier ifIssuer () {
-    require(issuer == msg.sender) ;
-    _;
-  }
-
-  function getName() public constant returns(string) {
+  function getName() public view returns(string memory) {
     return name;
   }
 
-  function setName(string newName) ifIssuer public returns(string) {
+  function setName(string memory newName) public returns(string memory) {
+    require(issuer == msg.sender) ;
     name = newName;
     return name;
   }
